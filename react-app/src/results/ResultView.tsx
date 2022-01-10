@@ -98,9 +98,11 @@ export const ResultView: React.FC = () => {
           {btnState !== BasicState.Initial && <EmptyState>{btnMsg}</EmptyState>}
         </Section>
         <Section>
-          {Object.entries(results).map(([name, data], index) => (
-            <VsTable key={name} index={index} name={name} data={data} />
-          ))}
+          {Object.entries(results)
+            .sort(([, data1], [, data2]) => data2.score - data1.score)
+            .map(([name, data], index) => (
+              <VsTable key={name} index={index} name={name} data={data} />
+            ))}
         </Section>
       </>
     );
