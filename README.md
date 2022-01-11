@@ -87,19 +87,19 @@ handleInput() {
 To test or to play against your AI go into `~/pong/Game.ts` and search for
 
 ```ts
-const g = new Game(Bar, LowIntelligenceAIBar, 'game-canvas');
+const g = new Game(Bar, LowIntelligenceAIBar);
 ```
 
 The Game constructor takes two `Bar` classes as parameters. Pass in `Bar` to play yourself or any other Bar-AI class. To play against our newly created AI this line should look like this (Be sure your class is imported in this file):
 
 ```ts
-const g = new Game(Bar, MyAiBar, 'game-canvas');
+const g = new Game(Bar, MyAiBar);
 ```
 
 If you want to test your AI against the default AI Bar go with this one
 
 ```ts
-const g = new Game(MyAiBar, LowIntelligenceAIBar, 'game-canvas');
+const g = new Game(MyAiBar, LowIntelligenceAIBar);
 ```
 
 After instantiating the game you can either call `simulate(numberOfGames:number) -> [drafts: number, winsP1: number, winsP2: number]` which will simulate the given number of games and return the results or `run()` which will start a new human-playable game.

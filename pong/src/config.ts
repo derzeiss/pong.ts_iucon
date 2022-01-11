@@ -23,7 +23,7 @@ export const BAR_SPEED = 5;
 // Acceleration is applied on-hit
 export const BALL_SIZE = 20;
 export const BALL_SPEED_X_MIN = 5;
-export const BALL_SPEED_Y_MAX = 10;
+export const BALL_SPEED_Y_MAX = 15;
 export const BALL_ACC = 1.1;
 
 // Points to win a game

@@ -142,6 +142,6 @@ export class Ball {
     this.x = WIDTH / 2;
     this.y = HEIGHT / 2;
     this.vx = BALL_SPEED_X_MIN * direction;
-    this.vy = randint(-BALL_SPEED_Y_MAX, BALL_SPEED_Y_MAX);
+    this.vy = randint(-BALL_SPEED_Y_MAX / 2, BALL_SPEED_Y_MAX / 2);
   }
 }

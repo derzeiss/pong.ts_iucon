@@ -28,20 +28,20 @@ export class Game {
   private canvas!: HTMLCanvasElement;
   private ctx!: CanvasRenderingContext2D;
 
-  constructor(player1Class: typeof Bar, player2Class: typeof Bar, canvasId: string = '') {
-    if (canvasId) {
-      this.initCanvas(canvasId);
-    }
+  constructor(player1Class: typeof Bar, player2Class: typeof Bar) {
+    this.initCanvas();
 
     // game objects
     this.player1Class = player1Class;
     this.player2Class = player2Class;
   }
 
-  initCanvas(canvasId: string) {
+  initCanvas() {
     // document not defined -> used as module in node.js -> don't init canvas
     if (typeof document === 'undefined') return;
-    this.canvas = document.getElementById(canvasId) as HTMLCanvasElement;
+
+    this.canvas = document.createElement('canvas');
+    document.body.appendChild(this.canvas);
     this.ctx = this.canvas.getContext('2d') as CanvasRenderingContext2D;
     this.canvas.width = WIDTH;
     this.canvas.height = HEIGHT;

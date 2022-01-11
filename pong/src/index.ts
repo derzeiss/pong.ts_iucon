@@ -32,7 +32,7 @@ export {
   // start game if we are inside the browser
   if (typeof document === "undefined") return;
 
-  const g = new Game(Bar, LowIntelligenceAIBar, "game-canvas");
+  const g = new Game(Bar, LowIntelligenceAIBar);
   //console.log(g.simulate(1000));  // comment in this line to simulate 1000 games between these two classes before actually starting a game
   g.run();
 })();
